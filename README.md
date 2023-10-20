@@ -82,7 +82,7 @@ const ecoindex = require('ecoindex');
     await browser.close();
 
     // calculate ecoindex
-    var index = ecoindex.calculate(dom, req, Math.round(size / 1024));
+    var index = ecoindex.getEcoindex(dom, req, Math.round(size / 1024));
 
     process.stdout.write(index.toString());
 })();
